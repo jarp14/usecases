@@ -1,0 +1,7 @@
+# Tracing options for the org.chico.usecases.diagram plug-in
+
+# Common issues
+org.chico.usecases.diagram/debug=false
+
+# Visual IDs
+org.chico.usecases.diagram/debug/visualID=false

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="usecases">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="ClosedArrow">
+      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+      <template/>
+      <template x="-2" y="2"/>
+      <template x="-2" y="-2"/>
+      <template/>
+    </figures>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ExtendFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="IncludeFigureTargetDecoration"/>
+    <descriptors name="ActorFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/org.chico.usecases/icons/user.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ActorLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor"/>
+    </descriptors>
+    <descriptors name="UseCaseFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="UseCaseFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UseCaseLabelFigure" text="UseCase"/>
+      </actualFigure>
+      <accessors accessor="getFigureUseCaseLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="SystemFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="SystemFigure">
+        <preferredSize dx="300" dy="400"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="SystemLabelFigure" text="System">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="SystemUseCasesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureSystemLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors accessor="getSystemUseCasesCompartmentFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AssociationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AssociationFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="GeneralizationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="GeneralizationFigure" targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ExtendFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ExtendFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ExtendLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ExtendLabelLabel" text="Extend"/>
+    </descriptors>
+    <descriptors name="IncludeFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="IncludeFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.2">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="IncludeLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="IncludeLabelLabel" text="Include"/>
+    </descriptors>
+  </figures>
+  <nodes name="Actor" figure="ActorFigure"/>
+  <nodes name="UseCase" figure="UseCaseFigure"/>
+  <nodes name="System" figure="SystemFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="300" dy="400"/>
+    </facets>
+  </nodes>
+  <connections name="Association" figure="AssociationFigure"/>
+  <connections name="Generalization" figure="GeneralizationFigure"/>
+  <connections name="Extend" figure="ExtendFigure"/>
+  <connections name="Include" figure="IncludeFigure"/>
+  <compartments name="SystemUseCasesCompartment" figure="SystemFigure" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <labels name="ActorLabel" figure="ActorLabelFigure" elementIcon="false"/>
+  <labels name="UseCaseLabel" figure="UseCaseFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="SystemLabel" figure="SystemFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="ExtendLabel" figure="ExtendLabelFigure" elementIcon="false"/>
+  <labels name="IncludeLabel" figure="IncludeLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

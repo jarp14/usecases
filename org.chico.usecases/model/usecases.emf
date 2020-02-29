@@ -1,0 +1,82 @@
+@gmf
+@namespace(uri="usecases", prefix="usecases")
+package usecases;
+
+@gmf.diagram()
+class UseCasesDiagram {
+	val System[*] systems;
+	val Actor[*] actors;
+	val Link[*] links;
+}
+
+abstract class Link {}
+
+@gmf.link(source="source", target="target", tool.name="Association",
+			style="solid", width="1", color="0,0,0", incoming="true",
+			tool.small.bundle="org.chico.usecases.figures", tool.small.path="images/Association.gif",
+			source.constraint="self <> oppositeEnd",
+			target.constraint="self <> oppositeEnd")
+class Association extends Link {
+	ref Actor[1] source;
+	ref UseCase[1] target;
+}
+
+@gmf.link(source="source", target="target", tool.name="Generalization",
+			style="solid", width="1", color="0,0,0", target.decoration="closedarrow",
+			tool.small.bundle="org.chico.usecases.figures", tool.small.path="images/Generalization.gif",
+			source.constraint="self <> oppositeEnd",
+			target.constraint="self <> oppositeEnd")
+class Generalization extends Link {
+	ref Actor[1] source;
+	ref Actor[1] target;
+}
+
+@gmf.link(label="type",
+			source="source", target="target", tool.name="Extend",
+			style="dash", width="1", color="0,0,0", target.decoration="arrow",
+			tool.small.bundle="org.chico.usecases.figures", tool.small.path="images/Extend.gif",
+			source.constraint="self <> oppositeEnd",
+			target.constraint="self <> oppositeEnd")
+class Extend extends Link {
+	readonly attr String type = "<<extend>>";
+	ref UseCase[1] source;
+	ref UseCase[1] target;
+}
+
+@gmf.link(label="type",
+			source="source", target="target", tool.name="Include",
+			style="dash", width="1", color="0,0,0", target.decoration="arrow",
+			tool.small.bundle="org.chico.usecases.figures", tool.small.path="images/Include.gif",
+			source.constraint="self <> oppositeEnd",
+			target.constraint="self <> oppositeEnd")
+class Include extends Link {
+	readonly attr String type = "<<include>>";
+	ref UseCase[1] source;
+	ref UseCase[1] target;
+}
+
+
+@gmf.node(label="title",
+label.icon="false", figure="svg",
+svg.uri="platform:/plugin/org.chico.usecases/icons/user.svg",
+tool.small.bundle="org.chico.usecases.figures", tool.name="Actor",
+tool.small.path="images/Actor.gif", label.placement="external")
+class Actor {
+	attr String title = "[title]";
+}
+
+@gmf.node(label="title",
+label.icon="false", figure="ellipse", border.color="0,0,0",
+tool.small.bundle="org.chico.usecases.figures",
+tool.small.path="images/UseCase.gif", tool.name="Use Case")
+class UseCase {
+	attr String title = "[use case]";
+}
+
+@gmf.node(label="title", tool.name="System", size="300,400",
+			tool.small.bundle="org.chico.usecases.figures", tool.small.path="images/System.gif")
+class System {
+	attr String title = "[title]";
+	@gmf.compartment(layout="free", collapsible="false")
+	val UseCase[*] useCases;
+}

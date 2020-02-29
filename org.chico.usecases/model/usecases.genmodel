@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/org.chico.usecases/src" modelPluginID="org.chico.usecases"
+    modelName="Usecases" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>usecases.emf</foreignModel>
+  <genPackages prefix="Usecases" disposableProviderFactory="true" ecorePackage="usecases.ecore#/">
+    <genClasses ecoreClass="usecases.ecore#//UseCasesDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usecases.ecore#//UseCasesDiagram/systems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usecases.ecore#//UseCasesDiagram/actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usecases.ecore#//UseCasesDiagram/links"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="usecases.ecore#//Link"/>
+    <genClasses ecoreClass="usecases.ecore#//Association">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Association/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Association/target"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//Generalization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Generalization/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Generalization/target"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//Extend">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute usecases.ecore#//Extend/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Extend/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Extend/target"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//Include">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute usecases.ecore#//Include/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Include/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usecases.ecore#//Include/target"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usecases.ecore#//Actor/title"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//UseCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usecases.ecore#//UseCase/title"/>
+    </genClasses>
+    <genClasses ecoreClass="usecases.ecore#//System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usecases.ecore#//System/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usecases.ecore#//System/useCases"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

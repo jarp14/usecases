@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package usecases.diagram.providers;
+
+import org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider;
+import org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider;
+
+/**
+ * @generated
+ */
+public class UsecasesIconProvider extends DefaultElementTypeIconProvider implements IIconProvider {
+
+	/**
+	* @generated
+	*/
+	public UsecasesIconProvider() {
+		super(UsecasesElementTypes.TYPED_INSTANCE);
+	}
+
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="usecasesPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Objects"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Actor"
+          description="Create new Actor">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/Actor.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="System"
+          description="Create new System">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/System.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Use Case"
+          description="Create new Use Case">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/UseCase.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Connections"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Association"
+          description="Create new Association">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/Association.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Extend"
+          description="Create new Extend">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/Extend.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Generalization"
+          description="Create new Generalization">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/Generalization.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Include"
+          description="Create new Include">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="images/Include.gif"
+            bundle="org.chico.usecases.figures"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

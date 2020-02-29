@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated usecases -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="usecases.presentation.UsecasesModelWizardID"
+            name="%_UI_UsecasesModelWizard_label"
+            class="usecases.presentation.UsecasesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UsecasesModelFile.gif">
+         <description>%_UI_UsecasesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated usecases -->
+      <editor
+            id="usecases.presentation.UsecasesEditorID"
+            name="%_UI_UsecasesEditor_label"
+            icon="icons/full/obj16/UsecasesModelFile.gif"
+            extensions="usecases"
+            class="usecases.presentation.UsecasesEditor"
+            contributorClass="usecases.presentation.UsecasesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
